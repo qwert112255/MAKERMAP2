@@ -1,9 +1,13 @@
 package com.example.emma119018.makermap;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -24,6 +28,14 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnMenuTabClickListener;
 
+import android.location.LocationManager;
+import android.content.Context;
+import android.location.Criteria;
+import android.location.Location;
+import android.util.Log;
+
+import java.util.Map;
+
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
@@ -39,14 +51,35 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    Intent intent=new Intent(MapsActivity.this,Main2Activity.class);
-                    startActivity(intent);
+                    startActivity(new Intent(MapsActivity.this, Main2Activity.class));
                     break;
                 case R.id.navigation_dashboard:
                     return true;
                 case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
-                    return true;
+                    LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+                    String provider = "gps";
+                    if (ActivityCompat.checkSelfPermission(MapsActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(MapsActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                        // TODO: Consider calling
+                        //    ActivityCompat#requestPermissions
+                        // here to request the missing permissions, and then overriding
+                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                        //                                          int[] grantResults)
+                        // to handle the case where the user grants the permission. See the documentation
+                        // for ActivityCompat#requestPermissions for more details.
+                        return true;
+                    }
+                    Location location = locationManager.getLastKnownLocation(provider);
+                    //定位跑不出來
+                    //定位跑不出來
+                    //定位跑不出來
+
+                    if (location!=null){
+                     Log.i("LOCATION",location.getLatitude()+"/"+location.getLongitude());
+                     mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(),location.getLongitude()),15));
+                    }
+
+                    //mTextMessage.setText(R.string.title_notifications);
+                    //return true;
             }
             finish();
             return true;
