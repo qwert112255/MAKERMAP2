@@ -3,6 +3,7 @@ package com.example.emma119018.makermap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 
 public class WelcomeActivity extends AppCompatActivity {
 
