@@ -4,11 +4,15 @@
     <string name="place">Place</string>
     <string name="date">Date</string>
     <string name="home">Home</string>
-    <string name="locate" />
     <string name="location">Location</string>
+
+    <string name="locate" />
     <string name="title_activity_main">MainActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_avtivity">avtivity</string>
+    <string name="北台灣">北台灣</string>
+    <string name="中台灣">中台灣</string>
+    <string name="南台灣">南台灣</string>
 </resources>

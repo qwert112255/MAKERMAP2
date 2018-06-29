@@ -11,6 +11,7 @@
         android:icon="@drawable/home"
         android:title="@string/home"
         />
+
     <item
         android:id="@+id/location"
         android:icon="@drawable/location"

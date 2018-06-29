@@ -1,51 +1,39 @@
 package com.example.emma119018.makermap;
 
-import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.GoogleMap;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import android.location.LocationManager;
-import android.content.Context;
-import android.location.Criteria;
-import android.location.Location;
-
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import android.util.Log;
-
-public class Main2Activity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
 
     private ListView listView;
     private ListAdapter listAdapter;
     private TextView mTextMessage;
     private GoogleMap mMap;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
-
+        setContentView(R.layout.activity_main);
         listView = (ListView) findViewById(R.id.listView);
 
         List<HashMap<String , String>> list = new ArrayList<>();
 
-        String[] str1 = new String[]{"【造物者The Maker Workshop】3D列印暑期體驗課"};
-        String[] str2 = new String[]{"主辦：THE Maker Workshop 造物者工坊"};
-        String[] str3 = new String[]{"時間：7/4 10:00 – /31 19:00"};
+        String[] str1 = new String[]{"✦4~8年級✦ 小創客3d Arduino APP電動車自造坊"};
+        String[] str2 = new String[]{"主辦：CodePro酷博兒童程式創客教育"};
+        String[] str3 = new String[]{"時間：7/2 9:00 – 7/6 17:00"};
 
         for(int i = 0 ; i < str1.length ; i++){
             HashMap<String , String> hashMap = new HashMap<>();

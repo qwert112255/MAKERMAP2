@@ -1,106 +1,65 @@
 package com.example.emma119018.makermap;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationManager;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.Window;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-
 import com.roughike.bottombar.BottomBar;
-import com.roughike.bottombar.OnMenuTabClickListener;
-
-import android.location.LocationManager;
-import android.content.Context;
-import android.location.Criteria;
-import android.location.Location;
-import android.util.Log;
-
-import java.util.Map;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    private static final int REQUEST_LOCATION=2;
     private BottomBar mBottomBar;
 
     private TextView mTextMessage;
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
-        @Override
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
 
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    startActivity(new Intent(MapsActivity.this, Main2Activity.class));
-                    break;
-                case R.id.navigation_dashboard:
-                    return true;
-                case R.id.navigation_notifications:
-                    LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-                    String provider = "gps";
-                    if (ActivityCompat.checkSelfPermission(MapsActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(MapsActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                        // TODO: Consider calling
-                        //    ActivityCompat#requestPermissions
-                        // here to request the missing permissions, and then overriding
-                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                        //                                          int[] grantResults)
-                        // to handle the case where the user grants the permission. See the documentation
-                        // for ActivityCompat#requestPermissions for more details.
-                        return true;
-                    }
-                    Location location = locationManager.getLastKnownLocation(provider);
-                    //定位跑不出來
-                    //定位跑不出來
-                    //定位跑不出來
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_maps);
+        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
+    }
 
-                    if (location!=null){
-                     Log.i("LOCATION",location.getLatitude()+"/"+location.getLongitude());
-                     mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(),location.getLongitude()),15));
-                    }
 
-                    //mTextMessage.setText(R.string.title_notifications);
-                    //return true;
-            }
-            finish();
-            return true;
+    @SuppressLint("MissingPermission")
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        switch (requestCode){
+            case REQUEST_LOCATION:
+                if (grantResults.length>0
+                        &&grantResults[0]==PackageManager.PERMISSION_GRANTED){
+                    //使用者允許權限
+                    //noinspection MissingPermission
+                    setupMyLocation();
+                }else {
+                    //使用者拒絕授權, 停用MyLocation功能
+                }
+                break;
         }
-    };
-
-
-       @Override
-       protected void onCreate(Bundle savedInstanceState) {
-
-           super.onCreate(savedInstanceState);
-               setContentView(R.layout.activity_maps);
-               // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-                      SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
-               mapFragment.getMapAsync(this);
-
-           mTextMessage = (TextView) findViewById(R.id.message);
-           BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-           navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-               }
-
+    }
 
     /**
      * Manipulates the map once available.
@@ -120,8 +79,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions makerOpt = new MarkerOptions();
 
 
-
         mMap = googleMap;
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION);
+        }else {
+            setupMyLocation();
+        }
+
 
 
         // Add a marker in Sydne
@@ -820,6 +784,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         CustomInfoWindowAdapter adapter = new CustomInfoWindowAdapter(MapsActivity.this);
         googleMap.setInfoWindowAdapter(adapter);
+    }
+
+    @SuppressLint("MissingPermission")
+    private void setupMyLocation() {
+        mMap.setMyLocationEnabled(true);
+        mMap.setOnMyLocationButtonClickListener(
+                new GoogleMap.OnMyLocationButtonClickListener() {
+                    @Override
+                    public boolean onMyLocationButtonClick() {
+                        //透過位置服務，取得目前裝置所在
+                        return false;
+                    }
+                });
     }
 
 }

@@ -43,8 +43,12 @@
             android:exported="true" />
         <activity
             android:name=".WelcomeActivity"
-            android:exported="true"
-            />
+            android:exported="true" />
+        <activity
+            android:name=".ChooseActivity"
+            android:exported="true" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Main3Activity"></activity>
     </application>
 
 </manifest>
