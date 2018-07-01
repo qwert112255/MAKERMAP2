@@ -56,9 +56,41 @@ public class ChooseActivity extends AppCompatActivity {
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        Button button=(Button)findViewById(R.id.north);
+        Button button1=(Button)findViewById(R.id.center);
+        Button button2=(Button)findViewById(R.id.south);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setClass(ChooseActivity.this,MainActivity.class);
+                startActivity(intent);
+            }
+
+        });
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               Intent intent1 = new Intent();
+               intent1.setClass(ChooseActivity.this,Main2Activity.class);
+               startActivity(intent1);
+            }
+        });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent();
+                intent2.setClass(ChooseActivity.this,Main3Activity.class);
+                startActivity(intent2);
+            }
+        });
+
     }
 
     public void onNavigationItemReselected(@NonNull MenuItem item) {
 
     }
+
 }

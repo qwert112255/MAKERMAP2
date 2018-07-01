@@ -4,7 +4,7 @@
     <string name="place">Place</string>
     <string name="date">Date</string>
     <string name="home">Home</string>
-    <string name="location">Location</string>
+    <string name="about">About</string>
 
     <string name="locate" />
     <string name="title_activity_main">MainActivity</string>
