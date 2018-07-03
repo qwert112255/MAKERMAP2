@@ -30,8 +30,8 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps">
+            android:name=".WelcomeActivity"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -42,8 +42,9 @@
             android:name=".Main2Activity"
             android:exported="true" />
         <activity
-            android:name=".WelcomeActivity"
-            android:exported="true" />
+        android:name=".MapsActivity"
+        android:label="@string/title_activity_maps"
+            android:exported="true"/>
         <activity
             android:name=".ChooseActivity"
             android:exported="true" />
