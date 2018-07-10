@@ -22,7 +22,6 @@ public class WelcomeActivity extends AppCompatActivity {
             switch (msg.what) {
                 case GOTO_MAIN_ACTIVITY:
                     Intent intent = new Intent();
-                    //將原本Activity的換成MainActivity
                     intent.setClass(WelcomeActivity.this, MapsActivity.class);
                     startActivity(intent);
                     finish();
