@@ -73,9 +73,9 @@ public class ChooseActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               Intent intent1 = new Intent();
-               intent1.setClass(ChooseActivity.this,Main2Activity.class);
-               startActivity(intent1);
+                Intent intent1 = new Intent();
+                intent1.setClass(ChooseActivity.this,Main2Activity.class);
+                startActivity(intent1);
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
