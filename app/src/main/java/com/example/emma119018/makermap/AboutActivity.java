@@ -6,12 +6,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 
 public class AboutActivity extends AppCompatActivity {
 
-    ImageButton myImagebutton;
-    ImageButton myImagebutton2;
+    private ImageButton myImagebutton;
+    private ImageButton myImagebutton2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,5 +33,15 @@ public class AboutActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        myImagebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_DIAL,Uri.parse("tel:0906569980"));
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                }
+        });
     }
+
 }
