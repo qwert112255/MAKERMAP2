@@ -43,9 +43,9 @@ public class Main2Activity extends AppCompatActivity{
 
         List<HashMap<String , String>> list = new ArrayList<>();
 
-        String[] str1 = new String[]{"【造物者The Maker Workshop】3D列印暑期體驗課"};
-        String[] str2 = new String[]{"主辦：THE Maker Workshop 造物者工坊"};
-        String[] str3 = new String[]{"時間：7/4 10:00 – /31 19:00"};
+        String[] str1 = new String[]{"ARVR實境商城"};
+        String[] str2 = new String[]{"主辦：台中創客基地"};
+        String[] str3 = new String[]{"時間：9/15 09:30 –  17:00"};
 
         for(int i = 0 ; i < str1.length ; i++){
             HashMap<String , String> hashMap = new HashMap<>();
