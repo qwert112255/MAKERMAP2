@@ -25,27 +25,9 @@ public class ChooseActivity extends AppCompatActivity {
     private ListView listView;
     private ListAdapter listAdapter;
     private TextView mTextMessage;
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
-        @Override
 
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_home:
 
-                    return true;
-                case R.id.navigation_dashboard:
-                    Intent Map = new Intent(ChooseActivity.this, MapsActivity.class);
-                    startActivity(Map);
-                    break;
-                case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
-                    return true;
-            }
-            finish();
-            return true;
-        }
-    };
 
 
     @Override
@@ -54,12 +36,34 @@ public class ChooseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_choose);
 
         mTextMessage = (TextView) findViewById(R.id.message);
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        final BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
 
         Button button=(Button)findViewById(R.id.north);
         Button button1=(Button)findViewById(R.id.center);
         Button button2=(Button)findViewById(R.id.south);
+
+        BottomNavigationView navigation1 = (BottomNavigationView)findViewById(R.id.navigation);
+        navigation1.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.navigation_home:
+                        break;
+                    case R.id.navigation_dashboard:
+                         Intent intent6 = new Intent();
+                         intent6.setClass(ChooseActivity.this,MapsActivity.class);
+                         startActivity(intent6);
+                         break;
+                    case R.id.navigation_notifications:
+                        Intent intent5 = new Intent();
+                        intent5.setClass(ChooseActivity.this,AboutActivity.class);
+                        startActivity(intent5);
+                        break;
+                        }
+                        return true;
+                }
+            });
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

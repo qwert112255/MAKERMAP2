@@ -2,8 +2,11 @@ package com.example.emma119018.makermap;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,6 +24,29 @@ public class AboutActivity extends AppCompatActivity {
 
         myImagebutton = (ImageButton)findViewById(R.id.imageButton2);
         myImagebutton2 = (ImageButton)findViewById(R.id.imageButton3);
+
+        BottomNavigationView navigation1 = (BottomNavigationView)findViewById(R.id.navigation);
+        navigation1.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.navigation_home:
+                        Intent intent3 = new Intent();
+                        intent3.setClass(AboutActivity.this,ChooseActivity.class);
+                        startActivity(intent3);
+                        break;
+                    case R.id.navigation_dashboard:
+                        Intent intent6 = new Intent();
+                        intent6.setClass(AboutActivity.this,MapsActivity.class);
+                        startActivity(intent6);
+                        break;
+                    case R.id.navigation_notifications:
+                        break;
+                }
+                return true;
+            }
+        });
 
         myImagebutton2.setOnClickListener(new View.OnClickListener() {
             @Override

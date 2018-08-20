@@ -41,6 +41,28 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        BottomNavigationView navigation1 = (BottomNavigationView)findViewById(R.id.navigation);
+        navigation1.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.navigation_home:
+                    Intent intent3 = new Intent();
+                    intent3.setClass(MapsActivity.this,ChooseActivity.class);
+                    startActivity(intent3);
+                    break;
+                    case R.id.navigation_dashboard:
+                    break;
+                    case R.id.navigation_notifications:
+                    Intent intent5 = new Intent();
+                    intent5.setClass(MapsActivity.this,AboutActivity.class);
+                    startActivity(intent5);
+                    break;
+                }
+                return true;
+            }
+        });
     }
 
 
