@@ -41,6 +41,32 @@ public class Main2Activity extends AppCompatActivity{
 
         listView = (ListView) findViewById(R.id.listView);
 
+        BottomNavigationView navigation1 = (BottomNavigationView)findViewById(R.id.navigation);
+        navigation1.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.navigation_home:
+                        Intent intent3 = new Intent();
+                        intent3.setClass(Main2Activity.this,ChooseActivity.class);
+                        startActivity(intent3);
+                        break;
+                    case R.id.navigation_dashboard:
+                        Intent intent6 = new Intent();
+                        intent6.setClass(Main2Activity.this,MapsActivity.class);
+                        startActivity(intent6);
+                        break;
+                    case R.id.navigation_notifications:
+                        Intent intent5 = new Intent();
+                        intent5.setClass(Main2Activity.this,AboutActivity.class);
+                        startActivity(intent5);
+                        break;
+                }
+                return true;
+            }
+        });
+
         List<HashMap<String , String>> list = new ArrayList<>();
 
         String[] str1 = new String[]{"ARVR實境商城"};

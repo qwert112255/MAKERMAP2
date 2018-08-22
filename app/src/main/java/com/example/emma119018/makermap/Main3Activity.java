@@ -1,6 +1,8 @@
 package com.example.emma119018.makermap;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -28,6 +30,32 @@ public class Main3Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main3);
 
         listView = (ListView) findViewById(R.id.listView);
+
+        BottomNavigationView navigation1 = (BottomNavigationView)findViewById(R.id.navigation);
+        navigation1.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.navigation_home:
+                        Intent intent3 = new Intent();
+                        intent3.setClass(Main3Activity.this,ChooseActivity.class);
+                        startActivity(intent3);
+                        break;
+                    case R.id.navigation_dashboard:
+                        Intent intent6 = new Intent();
+                        intent6.setClass(Main3Activity.this,MapsActivity.class);
+                        startActivity(intent6);
+                        break;
+                    case R.id.navigation_notifications:
+                        Intent intent5 = new Intent();
+                        intent5.setClass(Main3Activity.this,AboutActivity.class);
+                        startActivity(intent5);
+                        break;
+                }
+                return true;
+            }
+        });
 
         List<HashMap<String , String>> list = new ArrayList<>();
 
