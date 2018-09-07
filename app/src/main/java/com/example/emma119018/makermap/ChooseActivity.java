@@ -37,6 +37,7 @@ public class ChooseActivity extends AppCompatActivity {
 
         mTextMessage = (TextView) findViewById(R.id.message);
         final BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setSelectedItemId(R.id.navigation_home);
 
         Button button=(Button)findViewById(R.id.north);
         Button button1=(Button)findViewById(R.id.center);
@@ -49,19 +50,19 @@ public class ChooseActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.navigation_home:
-                        break;
+                        return true;
                     case R.id.navigation_dashboard:
                          Intent intent6 = new Intent();
                          intent6.setClass(ChooseActivity.this,MapsActivity.class);
                          startActivity(intent6);
-                         break;
+                        return true;
                     case R.id.navigation_notifications:
                         Intent intent5 = new Intent();
                         intent5.setClass(ChooseActivity.this,AboutActivity.class);
                         startActivity(intent5);
-                        break;
-                        }
                         return true;
+                        }
+                        return false;
                 }
             });
 

@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.listView);
 
         BottomNavigationView navigation1 = (BottomNavigationView)findViewById(R.id.navigation);
+        navigation1.setSelectedItemId(R.id.navigation_home);
         navigation1.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
 
             @Override

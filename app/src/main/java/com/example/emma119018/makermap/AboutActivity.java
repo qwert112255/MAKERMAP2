@@ -12,6 +12,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import static com.example.emma119018.makermap.R.id.navigation;
+import static com.example.emma119018.makermap.R.id.navigation_home;
+
 public class AboutActivity extends AppCompatActivity {
 
     private ImageButton myImagebutton;
@@ -25,7 +28,8 @@ public class AboutActivity extends AppCompatActivity {
         myImagebutton = (ImageButton)findViewById(R.id.imageButton2);
         myImagebutton2 = (ImageButton)findViewById(R.id.imageButton3);
 
-        BottomNavigationView navigation1 = (BottomNavigationView)findViewById(R.id.navigation);
+        final BottomNavigationView navigation1 = (BottomNavigationView)findViewById(R.id.navigation);
+        navigation1.setSelectedItemId(R.id.navigation_notifications);
         navigation1.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
 
             @Override
@@ -35,16 +39,16 @@ public class AboutActivity extends AppCompatActivity {
                         Intent intent3 = new Intent();
                         intent3.setClass(AboutActivity.this,ChooseActivity.class);
                         startActivity(intent3);
-                        break;
+                        return true;
                     case R.id.navigation_dashboard:
                         Intent intent6 = new Intent();
                         intent6.setClass(AboutActivity.this,MapsActivity.class);
                         startActivity(intent6);
-                        break;
+                        return true;
                     case R.id.navigation_notifications:
-                        break;
+                        return true;
                 }
-                return true;
+                return false;
             }
         });
 
