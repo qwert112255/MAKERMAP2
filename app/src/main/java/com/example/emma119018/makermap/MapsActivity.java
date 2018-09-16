@@ -22,6 +22,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.roughike.bottombar.BottomBar;
 
@@ -437,13 +438,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .snippet("桃園市中壢區環北路390號3樓"+'\n'+"03-4225205"));
         makerOpt.position(YC);
 
-        LatLng ICFA = new LatLng(24.888284, 121.133733);
-        mMap.addMarker(new MarkerOptions()
-                .position(ICFA)
-                .title("衣啟飛翔創客基地")
-                .snippet("桃園市楊梅區秀才路851號"+'\n'+"03-4855368#625#620"));
-        makerOpt.position(ICFA);
-
         LatLng ICFB = new LatLng(24.815689, 120.962720);
         mMap.addMarker(new MarkerOptions()
                 .position(ICFB)
@@ -817,10 +811,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 new GoogleMap.OnMyLocationButtonClickListener() {
                     @Override
                     public boolean onMyLocationButtonClick() {
-                        //透過位置服務，取得目前裝置所在
+                                //透過位置服務，取得目前裝置所在
                         return false;
                     }
                 });
     }
-
 }

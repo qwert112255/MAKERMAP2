@@ -70,7 +70,7 @@ public class Main2Activity extends AppCompatActivity{
 
         List<HashMap<String , String>> list = new ArrayList<>();
 
-        String[] str1 = new String[]{"ARVR實境商城"};
+        String[] str1 = new String[]{"Surfing on AWS快速開發您的第一個AI聊天機器人"};
         String[] str2 = new String[]{"主辦：台中創客基地"};
         String[] str3 = new String[]{"時間：9/15 09:30 –  17:00"};
 
