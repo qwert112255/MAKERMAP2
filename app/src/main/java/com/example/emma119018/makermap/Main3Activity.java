@@ -60,9 +60,9 @@ public class Main3Activity extends AppCompatActivity {
 
         List<HashMap<String , String>> list = new ArrayList<>();
 
-        String[] str1 = new String[]{"【創客萊吧 MakerLab】小型智慧農場與ROS綜合實務應用"};
-        String[] str2 = new String[]{"主辦：創客萊吧 MakerLab"};
-        String[] str3 = new String[]{"時間：7/7 9:00 – 7/8 16:00"};
+        String[] str1 = new String[]{"Zenbo大腦開發實戰工作坊！對話互動、室內導覽一次搞定"};
+        String[] str2 = new String[]{"主辦：MakerPRO自造達人社群聚落"};
+        String[] str3 = new String[]{"時間：9/29 10:00 – 17:00"};
 
         for(int i = 0 ; i < str1.length ; i++){
             HashMap<String , String> hashMap = new HashMap<>();
