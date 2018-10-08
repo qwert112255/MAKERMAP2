@@ -9,6 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="5dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/navigation">
 
@@ -16,8 +17,8 @@
             android:id="@+id/north"
             android:layout_width="match_parent"
             android:layout_height="95dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginEnd="0dp"
             android:text="@string/北台灣"
             android:textSize="25sp"
             app:layout_constraintBottom_toTopOf="@+id/center"
@@ -29,7 +30,7 @@
             android:id="@+id/center"
             android:layout_width="match_parent"
             android:layout_height="95dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="0dp"
             android:text="@string/中台灣"
             android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -41,8 +42,8 @@
             android:id="@+id/south"
             android:layout_width="match_parent"
             android:layout_height="95dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginTop="0dp"
             android:text="@string/南台灣"
             android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"

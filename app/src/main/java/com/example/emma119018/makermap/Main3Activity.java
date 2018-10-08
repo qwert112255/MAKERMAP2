@@ -63,20 +63,22 @@ public class Main3Activity extends AppCompatActivity {
         String[] str1 = new String[]{"Zenbo大腦開發實戰工作坊！對話互動、室內導覽一次搞定"};
         String[] str2 = new String[]{"主辦：MakerPRO自造達人社群聚落"};
         String[] str3 = new String[]{"時間：9/29 10:00 – 17:00"};
+        String[] str4 = new String[]{""};
 
         for(int i = 0 ; i < str1.length ; i++){
             HashMap<String , String> hashMap = new HashMap<>();
             hashMap.put("str1" , str1[i]);
             hashMap.put("str2" , str2[i]);
             hashMap.put("str3" , str3[i]);
+            hashMap.put("str4" , str4[i]);
             list.add(hashMap);
         }
         ListAdapter listAdapter = new SimpleAdapter(
                 this,
                 list,
                 R.layout.layout,
-                new String[]{"str1" , "str2","str3"} ,
-                new int[]{R.id.str1 ,R.id.str2, R.id.str3});
+                new String[]{"str1" , "str2","str3","str4"} ,
+                new int[]{R.id.str1 ,R.id.str2, R.id.str3,R.id.str4});
 
         listView.setAdapter(listAdapter);
     }

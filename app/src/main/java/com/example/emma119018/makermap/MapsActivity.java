@@ -112,7 +112,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
 
 
-
         // Add a marker in Sydne
         // y and move the camera
         LatLng FGU = new LatLng(24.816226, 121.722100);
@@ -807,6 +806,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     public boolean onMyLocationButtonClick() {
                                 //透過位置服務，取得目前裝置所在
                         return false;
+
                     }
                 });
     }

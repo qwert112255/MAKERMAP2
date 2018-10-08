@@ -73,20 +73,22 @@ public class Main2Activity extends AppCompatActivity{
         String[] str1 = new String[]{"Surfing on AWS快速開發您的第一個AI聊天機器人"};
         String[] str2 = new String[]{"主辦：台中創客基地"};
         String[] str3 = new String[]{"時間：9/15 09:30 –  17:00"};
+        String[] str4 = new String[]{""};
 
         for(int i = 0 ; i < str1.length ; i++){
             HashMap<String , String> hashMap = new HashMap<>();
             hashMap.put("str1" , str1[i]);
             hashMap.put("str2" , str2[i]);
             hashMap.put("str3" , str3[i]);
+            hashMap.put("str4" , str4[i]);
             list.add(hashMap);
         }
         ListAdapter listAdapter = new SimpleAdapter(
                 this,
                 list,
                 R.layout.layout,
-                new String[]{"str1" , "str2","str3"} ,
-                new int[]{R.id.str1 ,R.id.str2, R.id.str3});
+                new String[]{"str1" , "str2","str3","str4"} ,
+                new int[]{R.id.str1 ,R.id.str2, R.id.str3,R.id.str4});
 
         listView.setAdapter(listAdapter);
     }
