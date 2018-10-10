@@ -9,5 +9,5 @@
     android:paddingTop="0pt"
     android:paddingBottom="0pt"
     tools:context=".WelcomeActivity"
-    android:background="@drawable/homepage01">
+    android:background="@drawable/homepage">
 </android.support.constraint.ConstraintLayout>
