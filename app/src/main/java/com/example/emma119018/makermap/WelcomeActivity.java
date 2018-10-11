@@ -2,6 +2,7 @@ package com.example.emma119018.makermap;
 
 import android.content.Intent;
 import android.os.Handler;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,8 +16,9 @@ public class WelcomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_welcome);
         mHandler.sendEmptyMessageDelayed(GOTO_MAIN_ACTIVITY, 1500); //2秒跳轉
 
-        getSupportActionBar().hide();
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
+        //ActionBar actionBar = getSupportActionBar();
+        //actionBar.hide();
+        //移除Action Bar的其他方法
     }
     private static final int GOTO_MAIN_ACTIVITY = 0;
     private Handler mHandler = new Handler() {
