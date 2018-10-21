@@ -3,8 +3,14 @@ package com.example.emma119018.makermap;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.text.util.LinkifyCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.SpannableStringBuilder;
+import android.text.Spanned;
+import android.text.style.URLSpan;
+import android.text.util.Linkify;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListAdapter;
@@ -61,10 +67,12 @@ public class MainActivity extends AppCompatActivity {
 
         List<HashMap<String , String>> list = new ArrayList<>();
 
-        String[] str1 = new String[]{"React推廣教學–React入門【10/13 台北場】"};
-        String[] str2 = new String[]{"主辦：Reactjs新聞社群"};
-        String[] str3 = new String[]{"時間：10/13 13:00 – 16:00"};
-        String[] str4 = new String[]{""};
+        String[] str1 = new String[]{"【Arduino進階班】快速入門STM32嵌入式開發"};
+        String[] str2 = new String[]{"主辦：MakerPRO自造達人社群聚落"};
+        String[] str3 = new String[]{"時間：10/27 09:30 – 16:30"};
+        String[] str4 = new String[]{"報名："+"https://reurl.cc/avEq4"};
+
+        //Linkify.addLinks(str4,Linkify.WEB_URLS);
 
         for(int i = 0 ; i < str1.length ; i++){
             HashMap<String , String> hashMap = new HashMap<>();
@@ -82,10 +90,10 @@ public class MainActivity extends AppCompatActivity {
                 new int[]{R.id.str1 ,R.id.str2, R.id.str3,R.id.str4});
 
         listView.setAdapter(listAdapter);
-
     }
 
     public void onNavigationItemReselected(@NonNull MenuItem item) {
 
     }
+
 }

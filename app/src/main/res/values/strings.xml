@@ -17,4 +17,8 @@
     <string name="南台灣">南台灣</string>
     <string name="maker">創客棧1.0</string>
     <string name="yd">2018-10</string>
+    <string name="str4">textview</string>
+    <string name="str3">textview</string>
+    <string name="str2">textview</string>
+    <string name="str1">textview</string>
 </resources>

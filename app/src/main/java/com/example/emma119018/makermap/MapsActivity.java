@@ -123,6 +123,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         "設備：雷射雕刻機、3D掃瞄機.."));
         makerOpt.position(FGU);
 
+        LatLng SMM = new LatLng(24.816226, 121.722100);
+        mMap.addMarker(new MarkerOptions()
+                .position(SMM)
+                .title("山門創客基地")
+                .snippet("地址：宜蘭市員山鄉深福路128號"+'\n'+
+                        "電話：0986-669-856"+'\n'+
+                        "設備：雷射雕刻機.."));
+        makerOpt.position(SMM);
+
         LatLng SBH = new LatLng(24.984116, 121.451362);
         mMap.addMarker(new MarkerOptions()
                 .position(SBH)

@@ -45,7 +45,16 @@
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="102dp" />
 
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:text="本APP資料來自vMaker台灣自造者" />
+
     </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -58,6 +67,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp">
+
 
         <ImageButton
             android:id="@+id/imageButton3"
