@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:paddingTop="5dp"
-            android:text="本APP資料來自vMaker台灣自造者" />
+            android:text="APP資料由vMaker台灣自造者提供" />
 
     </LinearLayout>
 

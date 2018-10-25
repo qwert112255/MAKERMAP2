@@ -70,10 +70,10 @@ public class Main2Activity extends AppCompatActivity{
 
         List<HashMap<String , String>> list = new ArrayList<>();
 
-        String[] str1 = new String[]{"玩皮革× 敲敲打打小工匠"};
-        String[] str2 = new String[]{"主辦：洛卡爾-跨域創工坊"};
-        String[] str3 = new String[]{"時間：10/26 18:30 –  21:30"};
-        String[] str4 = new String[]{"報名："+"https://reurl.cc/Q3NRp"};
+        String[] str1 = new String[]{"玩皮革× 敲敲打打小工匠","【台中創客基地】3D列印與3D掃描入門實作","【台中創客基地】冬日氰版-手作藍晒工作坊"};
+        String[] str2 = new String[]{"主辦：洛卡爾-跨域創工坊","主辦：青年職涯發展中心暨TCN創客基地","主辦：青年職涯發展中心暨TCN創客基地"};
+        String[] str3 = new String[]{"時間：10/26 18:30 –  21:30","時間：11/3~4 9:30 –  17:00","時間：11/17 9:30 –  17:00"};
+        String[] str4 = new String[]{"報名："+"https://ppt.cc/fqUxix","報名："+"https://ppt.cc/ftLtUx","報名："+"https://ppt.cc/f6Lz9x"};
 
         for(int i = 0 ; i < str1.length ; i++){
             HashMap<String , String> hashMap = new HashMap<>();
