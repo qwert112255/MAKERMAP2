@@ -17,16 +17,16 @@ import static com.example.emma119018.makermap.R.id.navigation_home;
 
 public class AboutActivity extends AppCompatActivity {
 
-    private ImageButton myImagebutton;
-    private ImageButton myImagebutton2;
+    private Button myImagebutton;
+   // private ImageButton myImagebutton2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
-        myImagebutton = (ImageButton)findViewById(R.id.imageButton2);
-        myImagebutton2 = (ImageButton)findViewById(R.id.imageButton3);
+       // myImagebutton2 = (ImageButton)findViewById(R.id.imageButton2);
+        myImagebutton = (Button)findViewById(R.id.imageButton3);
 
         final BottomNavigationView navigation1 = (BottomNavigationView)findViewById(R.id.navigation);
         navigation1.setSelectedItemId(R.id.navigation_notifications);
@@ -52,7 +52,7 @@ public class AboutActivity extends AppCompatActivity {
             }
         });
 
-        myImagebutton2.setOnClickListener(new View.OnClickListener() {
+        myImagebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
@@ -64,14 +64,14 @@ public class AboutActivity extends AppCompatActivity {
             }
         });
 
-        myImagebutton.setOnClickListener(new View.OnClickListener() {
+      /*  myImagebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_DIAL,Uri.parse("tel:0906569980"));
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 }
-        });
+        });*/
     }
 
 }

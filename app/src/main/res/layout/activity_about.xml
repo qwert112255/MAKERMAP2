@@ -14,8 +14,8 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="16dp"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp">
 
         <ImageView
             android:id="@+id/imageView"
@@ -58,28 +58,23 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="352dp"
-        android:gravity="center"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="404dp"
         android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp">
+        tools:ignore="MissingConstraints">
 
-
-        <ImageButton
+        <Button
             android:id="@+id/imageButton3"
-            android:layout_width="190dp"
-            android:layout_height="100dp"
-            app:srcCompat="@drawable/email" />
-
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="190dp"
-            android:layout_height="100dp"
-            app:srcCompat="@drawable/phone" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="聯絡開發者"
+            android:background="#00000000"/>
     </LinearLayout>
 
     <android.support.design.widget.BottomNavigationView
