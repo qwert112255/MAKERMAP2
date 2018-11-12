@@ -46,6 +46,7 @@
             android:layout_marginTop="0dp"
             android:text="@string/南台灣"
             android:textSize="25sp"
+            android:background="@drawable/mainbutton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
