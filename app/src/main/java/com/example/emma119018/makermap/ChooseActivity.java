@@ -25,13 +25,16 @@ public class ChooseActivity extends AppCompatActivity {
     private ListView listView;
     private ListAdapter listAdapter;
     private TextView mTextMessage;
+    private Button im1;
+    private Button im2;
+    private Button im3;
 
 
 
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose);
 
@@ -91,8 +94,37 @@ public class ChooseActivity extends AppCompatActivity {
                 startActivity(intent2);
             }
         });
+        im1 = (Button)findViewById(R.id.im1);
+        im2 = (Button)findViewById(R.id.im2);
+        im3 = (Button)findViewById(R.id.im3);
+
+        im1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in3 = new Intent();
+                in3.setClass(ChooseActivity.this,Main4Activity.class);
+                startActivity(in3);
+            }
+        });
+        im2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in4 = new Intent();
+                in4.setClass(ChooseActivity.this,Main5Activity.class);
+                startActivity(in4);
+            }
+        });
+        im3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in5 = new Intent();
+                in5.setClass(ChooseActivity.this,Main6Activity.class);
+                startActivity(in5);
+            }
+        });
 
     }
+
 
     public void onNavigationItemReselected(@NonNull MenuItem item) {
 
