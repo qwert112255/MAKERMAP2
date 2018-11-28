@@ -94,9 +94,10 @@ public class ChooseActivity extends AppCompatActivity {
                 startActivity(intent2);
             }
         });
-        im1 = (Button)findViewById(R.id.im1);
-        im2 = (Button)findViewById(R.id.im2);
-        im3 = (Button)findViewById(R.id.im3);
+
+        Button im1 = (Button)findViewById(R.id.im1);
+        Button im2 = (Button)findViewById(R.id.im2);
+        Button im3 = (Button)findViewById(R.id.im3);
 
         im1.setOnClickListener(new View.OnClickListener() {
             @Override
