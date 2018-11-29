@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.RadioButton;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
@@ -45,6 +46,9 @@ public class ChooseActivity extends AppCompatActivity {
         Button button=(Button)findViewById(R.id.north);
         Button button1=(Button)findViewById(R.id.center);
         Button button2=(Button)findViewById(R.id.south);
+        final RadioButton rb1 = (RadioButton)findViewById(R.id.rb1);
+        final RadioButton rb2 = (RadioButton)findViewById(R.id.rb2);
+        final RadioButton rb3 = (RadioButton)findViewById(R.id.rb3);
 
         BottomNavigationView navigation1 = (BottomNavigationView)findViewById(R.id.navigation);
         navigation1.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -69,66 +73,92 @@ public class ChooseActivity extends AppCompatActivity {
                 }
             });
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent();
-                intent.setClass(ChooseActivity.this,MainActivity.class);
-                startActivity(intent);
-            }
 
-        });
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent1 = new Intent();
-                intent1.setClass(ChooseActivity.this,Main2Activity.class);
-                startActivity(intent1);
-            }
-        });
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent2 = new Intent();
-                intent2.setClass(ChooseActivity.this,Main3Activity.class);
-                startActivity(intent2);
-            }
-        });
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if ( rb1.isChecked()){
+                        Intent intent = new Intent();
+                        intent.setClass(ChooseActivity.this, Main4Activity.class);
+                        startActivity(intent);
+                    }else if (rb2.isChecked()){
+                        Intent intent = new Intent();
+                        intent.setClass(ChooseActivity.this, Main7Activity.class);
+                        startActivity(intent);
+                    }else if(rb3.isChecked()){
+                        Intent intent = new Intent();
+                        intent.setClass(ChooseActivity.this, Main8Activity.class);
+                        startActivity(intent);
+                    }else if(rb1.isChecked()&&rb2.isChecked()){
+                        Intent intent = new Intent();
+                        intent.setClass(ChooseActivity.this, Main9Activity.class);
+                        startActivity(intent);
+                    }else if (rb2.isChecked()&&rb3.isChecked()){
+                        Intent intent = new Intent();
+                        intent.setClass(ChooseActivity.this, Main10Activity.class);
+                        startActivity(intent);
+                    }else if (rb1.isChecked()&&rb3.isChecked()){
+                        Intent intent = new Intent();
+                        intent.setClass(ChooseActivity.this, Main11Activity.class);
+                        startActivity(intent);
+                    }else{
+                        Intent intent = new Intent();
+                        intent.setClass(ChooseActivity.this, MainActivity.class);
+                        startActivity(intent);
+                    }
+                }
 
-        Button im1 = (Button)findViewById(R.id.im1);
-        Button im2 = (Button)findViewById(R.id.im2);
-        Button im3 = (Button)findViewById(R.id.im3);
+            });
+            button1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if ( rb1.isChecked()){
+                        Intent intent = new Intent();
+                        intent.setClass(ChooseActivity.this, Main5Activity.class);
+                        startActivity(intent);
+                    }else if (rb2.isChecked()){
 
-        im1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent in3 = new Intent();
-                in3.setClass(ChooseActivity.this,Main4Activity.class);
-                startActivity(in3);
-            }
-        });
-        im2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent in4 = new Intent();
-                in4.setClass(ChooseActivity.this,Main5Activity.class);
-                startActivity(in4);
-            }
-        });
-        im3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent in5 = new Intent();
-                in5.setClass(ChooseActivity.this,Main6Activity.class);
-                startActivity(in5);
-            }
-        });
+                    }else if(rb3.isChecked()){
 
+                    }else if(rb1.isChecked()&&rb2.isChecked()){
+
+                    }else if (rb2.isChecked()&&rb3.isChecked()){
+
+                    }else if (rb1.isChecked()&&rb3.isChecked()){
+
+                    }else{
+                        Intent intent = new Intent();
+                        intent.setClass(ChooseActivity.this, Main2Activity.class);
+                        startActivity(intent);
+                    }
+                }
+
+            });
+            button2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if ( rb1.isChecked()){
+                        Intent intent = new Intent();
+                        intent.setClass(ChooseActivity.this, Main6Activity.class);
+                        startActivity(intent);
+                    }else if (rb2.isChecked()){
+
+                    }else if(rb3.isChecked()){
+
+                    }else if(rb1.isChecked()&&rb2.isChecked()){
+
+                    }else if (rb2.isChecked()&&rb3.isChecked()){
+
+                    }else if (rb1.isChecked()&&rb3.isChecked()){
+
+                    }else{
+                        Intent intent = new Intent();
+                        intent.setClass(ChooseActivity.this, Main3Activity.class);
+                        startActivity(intent);
+                    }
+                }
+
+            });
+
+    };
     }
-
-
-    public void onNavigationItemReselected(@NonNull MenuItem item) {
-
-    }
-
-}
