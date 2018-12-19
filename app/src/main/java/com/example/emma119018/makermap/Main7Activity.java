@@ -60,10 +60,10 @@ public class Main7Activity extends AppCompatActivity {
 
         List<HashMap<String , String>> list = new ArrayList<>();
 
-        String[] str1 = new String[]{"一起建造無人機深入颱風眼吧！","熱縮片手作教學","「我與福衛三號的故事」暨「衛星科學動手做」"};
-        String[] str2 = new String[]{"主辦：MakerPRO自造達人社群聚落","主辦：創客萊吧 MakerLab","主辦：國家太空中心"};
-        String[] str3 = new String[]{"時間：10/21 10:00 – 15:00","時間：10/25 19:00 – 22:00","時間：10/27 14:00 –  16:00"};
-        String[] str4 = new String[]{"報名："+"https://ppt.cc/fkPYEx","報名："+"https://ppt.cc/fAB05x","報名："+"https://ppt.cc/ffNBox"};
+        String[] str1 = new String[]{"鑲嵌木質杯墊體驗課程"};
+        String[] str2 = new String[]{"主辦：WOOD MU 悟得木"};
+        String[] str3 = new String[]{"時間：12/16 14:00 – 12/23 17:00"};
+        String[] str4 = new String[]{"報名："+"https://ppt.cc/fB8olx"};
 
         for(int i = 0 ; i < str1.length ; i++){
             HashMap<String , String> hashMap = new HashMap<>();

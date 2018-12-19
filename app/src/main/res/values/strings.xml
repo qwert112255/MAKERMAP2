@@ -23,6 +23,6 @@
     <string name="str1">textview</string>
     <string name="title_activity_main4">Main4Activity</string>
     <string name="DM">數位製造</string>
-    <string name="HM">手工藝</string>
+    <string name="HM">手工製造</string>
     <string name="TK">相關講座</string>
 </resources>

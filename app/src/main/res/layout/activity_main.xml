@@ -30,7 +30,9 @@
             android:layout_width="match_parent"
             android:layout_height="405dp"
             app:layout_constraintBottom_toTopOf="@+id/navigation"
-            app:layout_constraintStart_toStartOf="@+id/navigation" />
+            app:layout_constraintStart_toStartOf="@+id/navigation" >
+
+        </ListView>
 
         <android.support.design.widget.BottomNavigationView
             android:id="@+id/navigation"

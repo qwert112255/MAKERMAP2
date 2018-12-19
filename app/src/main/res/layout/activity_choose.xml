@@ -16,12 +16,12 @@
         <Button
             android:id="@+id/north"
             android:layout_width="match_parent"
-            android:layout_height="95dp"
-            android:layout_marginBottom="0dp"
+            android:layout_height="70dp"
             android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/mainbutton"
             android:text="@string/北台灣"
             android:textSize="25sp"
-            android:background="@drawable/mainbutton"
             app:layout_constraintBottom_toTopOf="@+id/center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -30,11 +30,11 @@
         <Button
             android:id="@+id/center"
             android:layout_width="match_parent"
-            android:layout_height="95dp"
+            android:layout_height="70dp"
             android:layout_marginEnd="0dp"
+            android:background="@drawable/mainbutton"
             android:text="@string/中台灣"
             android:textSize="25sp"
-            android:background="@drawable/mainbutton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -43,12 +43,12 @@
         <Button
             android:id="@+id/south"
             android:layout_width="match_parent"
-            android:layout_height="95dp"
-            android:layout_marginEnd="0dp"
+            android:layout_height="70dp"
             android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/mainbutton"
             android:text="@string/南台灣"
             android:textSize="25sp"
-            android:background="@drawable/mainbutton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -59,30 +59,29 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/im1"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
+            <CheckBox
+                android:id="@+id/rb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/button"
-                android:text="數位製造" />
+                android:text="@string/DM" />
 
-            <Button
-                android:id="@+id/im2"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
+            <CheckBox
+                android:id="@+id/rb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/button"
-                android:text="手工藝" />
+                android:text="@string/HM" />
 
-            <Button
-                android:id="@+id/im3"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
+            <CheckBox
+                android:id="@+id/rb3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/button"
-                android:text="相關講座" />
+                android:text="@string/TK" />
+
         </LinearLayout>
+
     </LinearLayout>
 
     <android.support.design.widget.BottomNavigationView

@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class Main9Activity extends AppCompatActivity {
+public class Main16Activity extends AppCompatActivity {
 
     private ListView listView;
     private ListAdapter listAdapter;
@@ -27,7 +27,7 @@ public class Main9Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main9);
+        setContentView(R.layout.activity_main16);
 
         listView = (ListView) findViewById(R.id.listView);
 
@@ -40,17 +40,17 @@ public class Main9Activity extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.navigation_home:
                         Intent intent3 = new Intent();
-                        intent3.setClass(Main9Activity.this,ChooseActivity.class);
+                        intent3.setClass(Main16Activity.this,ChooseActivity.class);
                         startActivity(intent3);
                         break;
                     case R.id.navigation_dashboard:
                         Intent intent6 = new Intent();
-                        intent6.setClass(Main9Activity.this,MapsActivity.class);
+                        intent6.setClass(Main16Activity.this,MapsActivity.class);
                         startActivity(intent6);
                         break;
                     case R.id.navigation_notifications:
                         Intent intent5 = new Intent();
-                        intent5.setClass(Main9Activity.this,AboutActivity.class);
+                        intent5.setClass(Main16Activity.this,AboutActivity.class);
                         startActivity(intent5);
                         break;
                 }
@@ -60,10 +60,10 @@ public class Main9Activity extends AppCompatActivity {
 
         List<HashMap<String , String>> list = new ArrayList<>();
 
-        String[] str1 = new String[]{"RESTful 物聯網平台實作體驗","IoT 雲端自動澆花系統實作","手做個人化雷雕小夜燈","鑲嵌木質杯墊體驗課程"};
-        String[] str2 = new String[]{"主辦：台灣立子雲","主辦：T客邦創客基地","主辦：MakerPRO自造達人社群聚落","主辦：WOOD MU 悟得木"};
-        String[] str3 = new String[]{"時間：12/14 13:30 – 16:30","時間：12/15 9:30 – 17:30","時間：12/16 9:30 –  16:30","時間：12/16 14:00 – 12/23 17:00"};
-        String[] str4 = new String[]{"報名："+"https://ppt.cc/fr7Uqx","報名："+"https://ppt.cc/fyMV4x","報名："+"https://makerpro.cc/","報名："+"https://ppt.cc/fB8olx"};
+        String[] str1 = new String[]{"microbit電流急急棒體驗日","藍草長出的循環經濟"};
+        String[] str2 = new String[]{"主辦：CodePro酷博兒童程式創客教育","主辦：品樂東海"};
+        String[] str3 = new String[]{"時間：11/18 10:00 –  12:00"+"/n"+"時間：12/9 10:00 –  12:00","時間：12/3 19:00 – 21:00"};
+        String[] str4 = new String[]{"報名："+"https://ppt.cc/fsFFyx","報名："+"https://ppt.cc/fZFhUx"};
 
         for(int i = 0 ; i < str1.length ; i++){
             HashMap<String , String> hashMap = new HashMap<>();

@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.RadioButton;
@@ -46,9 +47,9 @@ public class ChooseActivity extends AppCompatActivity {
         Button button=(Button)findViewById(R.id.north);
         Button button1=(Button)findViewById(R.id.center);
         Button button2=(Button)findViewById(R.id.south);
-        final RadioButton rb1 = (RadioButton)findViewById(R.id.rb1);
-        final RadioButton rb2 = (RadioButton)findViewById(R.id.rb2);
-        final RadioButton rb3 = (RadioButton)findViewById(R.id.rb3);
+        final CheckBox rb1 = (CheckBox) findViewById(R.id.rb1);
+        final CheckBox rb2 = (CheckBox) findViewById(R.id.rb2);
+        final CheckBox rb3 = (CheckBox) findViewById(R.id.rb3);
 
         BottomNavigationView navigation1 = (BottomNavigationView)findViewById(R.id.navigation);
         navigation1.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -109,6 +110,7 @@ public class ChooseActivity extends AppCompatActivity {
                 }
 
             });
+
             button1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -117,15 +119,25 @@ public class ChooseActivity extends AppCompatActivity {
                         intent.setClass(ChooseActivity.this, Main5Activity.class);
                         startActivity(intent);
                     }else if (rb2.isChecked()){
-
+                        Intent intent = new Intent();
+                        intent.setClass(ChooseActivity.this, Main12Activity.class);
+                        startActivity(intent);
                     }else if(rb3.isChecked()){
-
+                        Intent intent = new Intent();
+                        intent.setClass(ChooseActivity.this, Main13Activity.class);
+                        startActivity(intent);
                     }else if(rb1.isChecked()&&rb2.isChecked()){
-
+                        Intent intent = new Intent();
+                        intent.setClass(ChooseActivity.this, Main14Activity.class);
+                        startActivity(intent);
                     }else if (rb2.isChecked()&&rb3.isChecked()){
-
+                        Intent intent = new Intent();
+                        intent.setClass(ChooseActivity.this, Main15Activity.class);
+                        startActivity(intent);
                     }else if (rb1.isChecked()&&rb3.isChecked()){
-
+                        Intent intent = new Intent();
+                        intent.setClass(ChooseActivity.this, Main16Activity.class);
+                        startActivity(intent);
                     }else{
                         Intent intent = new Intent();
                         intent.setClass(ChooseActivity.this, Main2Activity.class);
@@ -142,15 +154,25 @@ public class ChooseActivity extends AppCompatActivity {
                         intent.setClass(ChooseActivity.this, Main6Activity.class);
                         startActivity(intent);
                     }else if (rb2.isChecked()){
-
+                        Intent intent = new Intent();
+                        intent.setClass(ChooseActivity.this, Main17Activity.class);
+                        startActivity(intent);
                     }else if(rb3.isChecked()){
-
+                        Intent intent = new Intent();
+                        intent.setClass(ChooseActivity.this, Main18Activity.class);
+                        startActivity(intent);
                     }else if(rb1.isChecked()&&rb2.isChecked()){
-
+                        Intent intent = new Intent();
+                        intent.setClass(ChooseActivity.this, Main19Activity.class);
+                        startActivity(intent);
                     }else if (rb2.isChecked()&&rb3.isChecked()){
-
+                        Intent intent = new Intent();
+                        intent.setClass(ChooseActivity.this, Main20Activity.class);
+                        startActivity(intent);
                     }else if (rb1.isChecked()&&rb3.isChecked()){
-
+                        Intent intent = new Intent();
+                        intent.setClass(ChooseActivity.this, Main21Activity.class);
+                        startActivity(intent);
                     }else{
                         Intent intent = new Intent();
                         intent.setClass(ChooseActivity.this, Main3Activity.class);
@@ -160,5 +182,5 @@ public class ChooseActivity extends AppCompatActivity {
 
             });
 
-    };
+    }
     }

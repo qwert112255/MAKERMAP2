@@ -67,10 +67,10 @@ public class MainActivity extends AppCompatActivity {
 
         List<HashMap<String , String>> list = new ArrayList<>();
 
-        String[] str1 = new String[]{"循環經濟與物聯網的跨界交乘 | 主講黃暐程","XPUMP Premium智慧音效引擎募資分享會","ICO網站開發暨聊天機器人應用"};
-        String[] str2 = new String[]{"主辦：Workface New Taipei","主辦：資策會/數位服務創新研究所","主辦：台北區塊鏈社群 | Taipei Blockchain Meetup"};
-        String[] str3 = new String[]{"時間：10/23 19:00 – 21:30","時間：10/24 19:00 – 21:00","時間：10/24 19:00 – 22:00"};
-        String[] str4 = new String[]{"報名：https://ppt.cc/fmuhPx","報名：https://ppt.cc/f1Ylbx","報名：https://ppt.cc/fSosYx"};
+        String[] str1 = new String[]{"PHP講座#40：PHP也有Day","PHP講座#40：從Farmbot到採果機器人","RESTful 物聯網平台實作體驗"};
+        String[] str2 = new String[]{"主辦：三創育成基金會","主辦：三創育成基金會","主辦：台灣立子雲"};
+        String[] str3 = new String[]{"時間：12/11 19:00 – 21:30","時間：12/14 19:30 – 21:30","時間：12/14 13:30 – 16:30"};
+        String[] str4 = new String[]{"報名：https://ppt.cc/fBPKqx","報名：https://ppt.cc/fuK2Xx","報名：https://ppt.cc/fr7Uqx"};
 
         //Linkify.addLinks(str4,Linkify.WEB_URLS);
 
