@@ -86,9 +86,9 @@ public class Main2Activity extends AppCompatActivity{
                 "時間：12/3 19:00 – 21:00"
                 };
         String[] str4 = new String[]{
-                "報名："+"https://ppt.cc/fnjPax",
-                "報名："+"https://ppt.cc/fsFFyx",
-                "報名："+"https://ppt.cc/fZFhUx"
+                "報名：https://ppt.cc/fnjPax",
+                "報名：https://ppt.cc/fsFFyx",
+                "報名：https://ppt.cc/fZFhUx"
                };
 
         for(int i = 0 ; i < str1.length ; i++){
