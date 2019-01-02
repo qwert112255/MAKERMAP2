@@ -63,7 +63,7 @@ public class Main18Activity extends AppCompatActivity {
         String[] str1 = new String[]{"2018創業小聚高雄特別場"};
         String[] str2 = new String[]{"主辦：高雄市政府經濟發展局"};
         String[] str3 = new String[]{"時間：11/19 18:30 – 11/20 21:00"};
-        String[] str4 = new String[]{"報名："+"https://ppt.cc/fuh5Gx"};
+        String[] str4 = new String[]{"報名：https://ppt.cc/fuh5Gx"};
 
         for(int i = 0 ; i < str1.length ; i++){
             HashMap<String , String> hashMap = new HashMap<>();

@@ -60,10 +60,10 @@ public class Main4Activity extends AppCompatActivity {
 
         List<HashMap<String , String>> list = new ArrayList<>();
 
-        String[] str1 = new String[]{"RESTful 物聯網平台實作體驗","IoT 雲端自動澆花系統實作","手做個人化雷雕小夜燈"};
-        String[] str2 = new String[]{"主辦：台灣立子雲","主辦：T客邦創客基地","主辦：MakerPRO自造達人社群聚落"};
-        String[] str3 = new String[]{"時間：12/14 13:30 – 16:30","時間：12/15 9:30 – 17:30","時間：12/16 9:30 –  16:30"};
-        String[] str4 = new String[]{"報名："+"https://ppt.cc/fr7Uqx","報名："+"https://ppt.cc/fyMV4x","報名："+"https://makerpro.cc/"};
+        String[] str1 = new String[]{"三小時打造自己的物聯網","Arduino四軸飛行器開發實作","Python姿態控制和影像處理特戰班"};
+        String[] str2 = new String[]{"主辦：台灣立子雲","主辦：T客邦創客基地","主辦：中軟科技有限公司"};
+        String[] str3 = new String[]{"時間：12/21 13:30 – 16:30","時間：1/5 17:30 – 19:30","時間：1/5 13:00 – 17:00"};
+        String[] str4 = new String[]{"報名：http://bit.ly/2SvbDis","報名：http://bit.ly/2Auau3J","報名：http://bit.ly/2ArNhiJ"};
 
         for(int i = 0 ; i < str1.length ; i++){
             HashMap<String , String> hashMap = new HashMap<>();

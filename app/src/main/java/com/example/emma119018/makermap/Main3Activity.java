@@ -60,10 +60,10 @@ public class Main3Activity extends AppCompatActivity {
 
         List<HashMap<String , String>> list = new ArrayList<>();
 
-        String[] str1 = new String[]{"Maker手作自動泡泡機", "AI人工智慧專家訓練營", "智能無人載具開發工作坊"};
-        String[] str2 = new String[]{"主辦：創客萊吧 MakerLab", "主辦：創客萊吧 MakerLab", "主辦：百創整合行銷有限公司"};
-        String[] str3 = new String[]{"時間：11/29 19:00 – 21:00", "時間：12/1 9:00 – 12/6 16:00", "時間：12/10 09:30 – 12/11 17:00"};
-        String[] str4 = new String[]{"報名："+"https://ppt.cc/fkSR1x", "報名："+"https://ppt.cc/fyZhTx", "報名："+"https://ppt.cc/f5bkFx"};
+        String[] str1 = new String[]{"AI人工智慧專家訓練營", "智能無人載具開發工作坊","樹莓派Gpio控制實務"};
+        String[] str2 = new String[]{"主辦：創客萊吧 MakerLab", "主辦：百創整合行銷有限公司","主辦：創客萊吧 MakerLab"};
+        String[] str3 = new String[]{"時間：12/1 9:00 – 12/6 16:00", "時間：12/10 09:30 – 12/11 17:00","時間：12/21 19:00 – 21:00"};
+        String[] str4 = new String[]{"報名："+"https://ppt.cc/fyZhTx", "報名："+"https://ppt.cc/f5bkFx", "報名："+"http://bit.ly/2SxopNr"};
 
         for(int i = 0 ; i < str1.length ; i++){
             HashMap<String , String> hashMap = new HashMap<>();

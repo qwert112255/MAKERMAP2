@@ -72,20 +72,24 @@ public class Main2Activity extends AppCompatActivity{
 
         String[] str1 = new String[]{
                 "木頭小型仿生獸手作體驗",
-                "藍草長出的循環經濟",
-                "microbit電流急急棒體驗日 "};
+                "microbit電流急急棒體驗日 ",
+                "藍草長出的循環經濟"
+                };
         String[] str2 = new String[]{
                 "主辦：成美文化園",
-                "主辦：品樂東海",
-                "主辦：CodePro酷博兒童程式創客教育"};
+                "主辦：CodePro酷博兒童程式創客教育",
+                "主辦：品樂東海"
+                 };
         String[] str3 = new String[]{
                 "時間：11/8 14:00 – 16:00",
-                "時間：12/3 19:00 – 21:00",
-                "時間：11/18 10:00 –  12:00"+"/n"+"時間：12/9 10:00 –  12:00"};
+                "時間：11/18 10:00 –  12:00"+"/n"+"時間：12/9 10:00 –  12:00",
+                "時間：12/3 19:00 – 21:00"
+                };
         String[] str4 = new String[]{
                 "報名："+"https://ppt.cc/fnjPax",
-                "報名："+"https://ppt.cc/fZFhUx",
-                "報名："+"https://ppt.cc/fsFFyx"};
+                "報名："+"https://ppt.cc/fsFFyx",
+                "報名："+"https://ppt.cc/fZFhUx"
+               };
 
         for(int i = 0 ; i < str1.length ; i++){
             HashMap<String , String> hashMap = new HashMap<>();
