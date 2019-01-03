@@ -82,35 +82,41 @@ public class ChooseActivity extends AppCompatActivity {
                         Intent intent = new Intent();
                         intent.setClass(ChooseActivity.this, Main4Activity.class);
                         startActivity(intent);
+                        if ( rb2.isChecked() ) {
+                            Intent intent1 = new Intent();
+                            intent1.setClass(ChooseActivity.this, Main9Activity.class);
+                            startActivity(intent1);
+                            if ( rb3.isChecked() ){
+                                Intent intent2 = new Intent();
+                                intent2.setClass(ChooseActivity.this, MainActivity.class);
+                                startActivity(intent2);
+                            }
+                        }
                     }else if (rb2.isChecked()){
                         Intent intent = new Intent();
                         intent.setClass(ChooseActivity.this, Main7Activity.class);
                         startActivity(intent);
-                    }else if(rb3.isChecked()){
+                        if (rb3.isChecked()){
+                            Intent intent3 = new Intent();
+                            intent3.setClass(ChooseActivity.this, Main10Activity.class);
+                            startActivity(intent3);
+                        }
+                    }else if (rb3.isChecked()) {
                         Intent intent = new Intent();
                         intent.setClass(ChooseActivity.this, Main8Activity.class);
                         startActivity(intent);
-                    }else if(rb1.isChecked()&&rb2.isChecked()){
-                        Intent intent = new Intent();
-                        intent.setClass(ChooseActivity.this, Main9Activity.class);
-                        startActivity(intent);
-                    }else if (rb2.isChecked()&&rb3.isChecked()){
-                        Intent intent = new Intent();
-                        intent.setClass(ChooseActivity.this, Main10Activity.class);
-                        startActivity(intent);
-                    }else if (rb1.isChecked()&&rb3.isChecked()){
-                        Intent intent = new Intent();
-                        intent.setClass(ChooseActivity.this, Main11Activity.class);
-                        startActivity(intent);
+                        if (rb1.isChecked()) {
+                            Intent intent4 = new Intent();
+                            intent4.setClass(ChooseActivity.this, Main11Activity.class);
+                            startActivity(intent4);
+                        }
                     }else{
                         Intent intent = new Intent();
                         intent.setClass(ChooseActivity.this, MainActivity.class);
                         startActivity(intent);
                     }
                 }
-
             });
-
             button1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -118,33 +124,40 @@ public class ChooseActivity extends AppCompatActivity {
                         Intent intent = new Intent();
                         intent.setClass(ChooseActivity.this, Main5Activity.class);
                         startActivity(intent);
+                        if ( rb2.isChecked() ) {
+                            Intent intent1 = new Intent();
+                            intent1.setClass(ChooseActivity.this, Main14Activity.class);
+                            startActivity(intent1);
+                            if ( rb3.isChecked() ){
+                                Intent intent2 = new Intent();
+                                intent2.setClass(ChooseActivity.this, Main2Activity.class);
+                                startActivity(intent2);
+                            }
+                        }
                     }else if (rb2.isChecked()){
                         Intent intent = new Intent();
                         intent.setClass(ChooseActivity.this, Main12Activity.class);
                         startActivity(intent);
-                    }else if(rb3.isChecked()){
+                        if (rb3.isChecked()){
+                            Intent intent3 = new Intent();
+                            intent3.setClass(ChooseActivity.this, Main15Activity.class);
+                            startActivity(intent3);
+                        }
+                    }else if (rb3.isChecked()) {
                         Intent intent = new Intent();
                         intent.setClass(ChooseActivity.this, Main13Activity.class);
                         startActivity(intent);
-                    }else if(rb1.isChecked()&&rb2.isChecked()){
-                        Intent intent = new Intent();
-                        intent.setClass(ChooseActivity.this, Main14Activity.class);
-                        startActivity(intent);
-                    }else if (rb2.isChecked()&&rb3.isChecked()){
-                        Intent intent = new Intent();
-                        intent.setClass(ChooseActivity.this, Main15Activity.class);
-                        startActivity(intent);
-                    }else if (rb1.isChecked()&&rb3.isChecked()){
-                        Intent intent = new Intent();
-                        intent.setClass(ChooseActivity.this, Main16Activity.class);
-                        startActivity(intent);
+                    if (rb1.isChecked()) {
+                        Intent intent4 = new Intent();
+                        intent4.setClass(ChooseActivity.this, Main16Activity.class);
+                        startActivity(intent4);
+                        }
                     }else{
                         Intent intent = new Intent();
                         intent.setClass(ChooseActivity.this, Main2Activity.class);
                         startActivity(intent);
                     }
                 }
-
             });
             button2.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -153,34 +166,40 @@ public class ChooseActivity extends AppCompatActivity {
                         Intent intent = new Intent();
                         intent.setClass(ChooseActivity.this, Main6Activity.class);
                         startActivity(intent);
+                        if ( rb2.isChecked() ) {
+                            Intent intent1 = new Intent();
+                            intent1.setClass(ChooseActivity.this, Main19Activity.class);
+                            startActivity(intent1);
+                            if ( rb3.isChecked() ){
+                                Intent intent2 = new Intent();
+                                intent2.setClass(ChooseActivity.this, Main3Activity.class);
+                                startActivity(intent2);
+                            }
+                        }
                     }else if (rb2.isChecked()){
                         Intent intent = new Intent();
                         intent.setClass(ChooseActivity.this, Main17Activity.class);
                         startActivity(intent);
-                    }else if(rb3.isChecked()){
+                        if (rb3.isChecked()){
+                            Intent intent3 = new Intent();
+                            intent3.setClass(ChooseActivity.this, Main20Activity.class);
+                            startActivity(intent3);
+                        }
+                    }else if (rb3.isChecked()) {
                         Intent intent = new Intent();
                         intent.setClass(ChooseActivity.this, Main18Activity.class);
                         startActivity(intent);
-                    }else if(rb1.isChecked()&&rb2.isChecked()){
-                        Intent intent = new Intent();
-                        intent.setClass(ChooseActivity.this, Main19Activity.class);
-                        startActivity(intent);
-                    }else if (rb2.isChecked()&&rb3.isChecked()){
-                        Intent intent = new Intent();
-                        intent.setClass(ChooseActivity.this, Main20Activity.class);
-                        startActivity(intent);
-                    }else if (rb1.isChecked()&&rb3.isChecked()){
-                        Intent intent = new Intent();
-                        intent.setClass(ChooseActivity.this, Main21Activity.class);
-                        startActivity(intent);
+                        if (rb1.isChecked()) {
+                            Intent intent4 = new Intent();
+                            intent4.setClass(ChooseActivity.this, Main21Activity.class);
+                            startActivity(intent4);
+                        }
                     }else{
                         Intent intent = new Intent();
                         intent.setClass(ChooseActivity.this, Main3Activity.class);
                         startActivity(intent);
                     }
                 }
-
             });
-
     }
     }
