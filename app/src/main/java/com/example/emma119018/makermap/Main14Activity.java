@@ -60,10 +60,10 @@ public class Main14Activity extends AppCompatActivity {
 
         List<HashMap<String , String>> list = new ArrayList<>();
 
-        String[] str1 = new String[]{"microbit電流急急棒體驗日","注連繩","皮革手環DIY","柴柴胸針/迷你相框"};
-        String[] str2 = new String[]{"主辦：CodePro酷博兒童程式創客教育","主辦：This Place 分享空間","主辦：工藝之夢－好玩藝設計講堂","主辦：目目手作"};
-        String[] str3 = new String[]{"時間：11/18 10:00 –  12:00 & 12/9 10:00 –  12:00","時間：1/20 14:00 – 17:00","時間：1/20 16:00 – 18:00","時間：1/26 9:00 – 12:30"};
-        String[] str4 = new String[]{"報名：https://ppt.cc/fsFFyx","報名：http://bit.ly/2SyDSwO","報名：http://bit.ly/2Swa83F","報名：http://bit.ly/2SwairN"};
+        String[] str1 = new String[]{"柴柴胸針/迷你相框","注連繩","皮革手環DIY","microbit電流急急棒體驗日"};
+        String[] str2 = new String[]{"主辦：目目手作","主辦：This Place 分享空間","主辦：工藝之夢－好玩藝設計講堂","主辦：CodePro酷博兒童程式創客教育"};
+        String[] str3 = new String[]{"時間：1/26 9:00 – 12:30","時間：1/20 14:00 – 17:00","時間：1/20 16:00 – 18:00","時間：11/18 10:00 –  12:00 & 12/9 10:00 –  12:00"};
+        String[] str4 = new String[]{"報名：http://bit.ly/2SwairN","報名：http://bit.ly/2SyDSwO","報名：http://bit.ly/2Swa83F","報名：https://ppt.cc/fsFFyx"};
 
         for(int i = 0 ; i < str1.length ; i++){
             HashMap<String , String> hashMap = new HashMap<>();

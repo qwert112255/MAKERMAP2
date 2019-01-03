@@ -60,10 +60,10 @@ public class Main3Activity extends AppCompatActivity {
 
         List<HashMap<String , String>> list = new ArrayList<>();
 
-        String[] str1 = new String[]{"AI人工智慧專家訓練營", "智能無人載具開發工作坊","樹莓派Gpio控制實務","基礎刺繡"};
-        String[] str2 = new String[]{"主辦：創客萊吧 MakerLab", "主辦：百創整合行銷有限公司","主辦：創客萊吧 MakerLab","主辦：說說刺繡工作室 "};
-        String[] str3 = new String[]{"時間：12/1 9:00 – 12/6 16:00", "時間：12/10 09:30 – 12/11 17:00","時間：12/21 19:00 – 21:00","時間：2/17 14:00 –  17:30 & 2/24 14:00 –  17:30"};
-        String[] str4 = new String[]{"報名：https://ppt.cc/fyZhTx", "報名：https://ppt.cc/f5bkFx", "報名：http://bit.ly/2SxopNr","報名：http://bit.ly/2SzUDYj"};
+        String[] str1 = new String[]{"基礎刺繡", "樹莓派Gpio控制實務","智能無人載具開發工作坊","AI人工智慧專家訓練營"};
+        String[] str2 = new String[]{"主辦：說說刺繡工作室 ","主辦：創客萊吧 MakerLab", "主辦：百創整合行銷有限公司","主辦：創客萊吧 MakerLab"};
+        String[] str3 = new String[]{"時間：2/17 14:00 –  17:30 & 2/24 14:00 –  17:30","時間：12/21 19:00 – 21:00 & 12/28 19:00 – 21:00", "時間：12/10 09:30 – 12/11 17:00","時間：12/1 9:00 – 12/6 16:00"};
+        String[] str4 = new String[]{"報名：http://bit.ly/2SzUDYj", "報名：http://bit.ly/2SxopNr","報名：https://ppt.cc/f5bkFx","報名：https://ppt.cc/fyZhTx"};
 
         for(int i = 0 ; i < str1.length ; i++){
             HashMap<String , String> hashMap = new HashMap<>();
